@@ -1,10 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import Header from './components/Header';
+import TodoList from './components/TodoList';
+import TodoInput from './components/TodoInput';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Header />
+      <TodoList/>
+      <TodoInput/>
     </View>
   );
 }
