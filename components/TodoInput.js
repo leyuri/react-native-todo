@@ -1,7 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-// import { KeyboardAvoidingView} from "react-native";
-
 
 const KeyboardAvoidingView = styled.KeyboardAvoidingView`
     width: 375px;
@@ -14,21 +12,22 @@ const TextInput = styled.TextInput`
     padding: 10px;
 
 `;
-
-
-export default () => {
+export default ({onSubmit}) => {
     const [value, setValue] = React.useState("");
-    return (
     
+    return (
     <KeyboardAvoidingView
       behavior={Platform.OS == "ios" ? "padding" : "height"}
     >
-    
-    <TextInput
-        placeholder = "Add a new item"
-        onChangeText={v => setValue(v)}
-        value={value}
-    />
+        <TextInput
+            placeholder = "Add a new item"
+            onChangeText={v => setValue(v)}
+            value={value}
+            onSubmitEditing={() => {
+                onSubmit(value);
+                setValue("");
+            }}
+        />
     </KeyboardAvoidingView>
     )
 }
