@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { Ionicons } from '@expo/vector-icons'; 
 
 // import { View, Tex } from "react-native"
 
@@ -33,6 +34,8 @@ function Item({item}) {
         underlayColor="#DDDDDD"
         onPress={() => {}}>
             <ItemView>
+                {item.done && <Ionicons name="ios-arrow-dropdown" size={24} color="black" />}
+                {!item.done && <Ionicons name="ios-radio-button-off" size={24} color="black" />}
                 <Text>{item.title}</Text>
             </ItemView>
         </TouchableHighlight>
