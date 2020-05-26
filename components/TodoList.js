@@ -15,13 +15,17 @@ const TouchableHighlight = styled.TouchableHighlight`
 `;
 
 
+//align-items: center는 가운데 정렬
 const ItemView = styled.View`
     padding: 10px;
     border-bottom-color: #eee;
     border-bottom-width: 1px;
+    flex-flow: row;
+    align-items: center;
 `;
 
 const Text = styled.Text`
+    margin-left: 10px;
     color: #444;
 `;
 
