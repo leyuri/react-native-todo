@@ -26,7 +26,7 @@ const ItemView = styled.View`
 
 const Text = styled.Text`
     margin-left: 10px;
-    color: #444;
+    color: ${props => props.done ? "#aaa" : "#000"};
 `;
 
 
@@ -38,9 +38,9 @@ function Item({item}) {
         underlayColor="#DDDDDD"
         onPress={() => {}}>
             <ItemView>
-                {item.done && <Ionicons name="ios-arrow-dropdown" size={24} color="black" />}
+                {item.done && <Ionicons name="ios-arrow-dropdown" size={24} color="#aaa" />}
                 {!item.done && <Ionicons name="ios-radio-button-off" size={24} color="black" />}
-                <Text>{item.title}</Text>
+                <Text done={item.done}>{item.title}</Text>
             </ItemView>
         </TouchableHighlight>
     )
