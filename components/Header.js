@@ -1,6 +1,21 @@
 import React from "react";
-import { Text } from "react-native"
+import styled from 'styled-components';
+
+
+const Text = styled.Text`
+    height: 40px;
+    font-size: 20px;
+    color: navy;
+`;
+
+
+
 
 export default () => {
-    return (<Text>Header</Text>)
+    return (
+        <Text>
+            Header
+        </Text>
+    )
 }
+
