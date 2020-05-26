@@ -10,7 +10,15 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Header />
-      <TodoList data={data}/>
+      <TodoList data={data} onToggle={ id => {
+        const newData = data.map(item => {
+          if (item.id == id) {
+            item.done = !item.done;
+          }
+          return item;
+        });
+        setData(newData);
+      }}/>
       <TodoInput onSubmit={(title) => {
         setData([{ id: title + (data.length + 1), title: title, done: false}, ...data]);
       }}/>
