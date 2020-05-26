@@ -8,7 +8,6 @@ const KeyboardAvoidingView = styled.KeyboardAvoidingView`
 
 const TextInput = styled.TextInput`
     background-color: #fff;
-    border: 1px solid #1C5D99;
     padding: 10px;
 `;
 export default ({onSubmit}) => {

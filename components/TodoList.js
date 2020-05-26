@@ -7,7 +7,7 @@ const TouchableHighlight = styled.TouchableHighlight`
 //align-items: center는 가운데 정렬
 const ItemView = styled.View`
     padding: 10px;
-    border-bottom-color: #eee;
+    border-bottom-color: #a2836e;
     border-bottom-width: 1px;
     flex-flow: row;
     align-items: center;
@@ -38,7 +38,7 @@ function Item({item, onToggle}) {
 }
 
 const FlatList = styled.FlatList`
-    background-color: #fff;
+    background-color: #fff2df;
     width:375px
 `;
 export default ({data, onToggle}) => {
